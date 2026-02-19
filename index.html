@@ -1,216 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <title>SkyRoute Travel | Flight Booking Specialist</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Book flights at the best prices with our travel agency. Special deals for last-minute flights, group bookings, and more.">
-    <meta name="keywords" content="flight booking, cheap flights, travel agency, last-minute flights, group bookings, flight deals">
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="SkyRoute Travel is a professional flight booking agency offering cheap flights, last-minute deals, and international ticket reservations worldwide.">
+    <meta name="keywords" content="flight booking, cheap flights, travel agent, airline tickets, international flights, last minute flights">
     <meta name="robots" content="index, follow">
-    <title>Travel Flight Agency</title>
-    
-    <!-- Open Graph Meta Tags for Social Media Sharing -->
-    <meta property="og:title" content="Travel Flight Agency">
-    <meta property="og:description" content="Book flights at the best prices with our travel agency. Special deals for last-minute flights, group bookings, and more.">
-    <meta property="og:image" content="https://via.placeholder.com/1600x900">
-    <meta property="og:url" content="https://your-github-pages-url.com">
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+    <meta name="author" content="SkyRoute Travel">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SkyRoute Travel - Flight Booking Experts">
+    <meta property="og:description" content="Book domestic and international flights at the best prices.">
+    <meta property="og:type" content="website">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (Vector Icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
     <!-- Internal CSS -->
     <style>
-        /* Style for Hero Section */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .navbar {
+            background-color: #0d6efd;
+        }
+
+        .navbar a {
+            color: white !important;
+            font-weight: 500;
+        }
+
         .hero {
-            background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://images.unsplash.com/photo-1502920917128-1aa500764b7d');
+            background-size: cover;
+            background-position: center;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 120px 20px;
+            text-align: center;
         }
 
         .hero h1 {
             font-size: 3rem;
+            font-weight: bold;
         }
 
-        .hero p {
-            font-size: 1.2rem;
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 40px;
         }
 
-        /* General Section Padding */
-        section {
-            padding: 60px 0;
+        .icon-box {
+            padding: 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+            background: #f8f9fa;
         }
 
-        /* Card Image Style */
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
+        .icon-box:hover {
+            background: #e9f2ff;
+            transform: translateY(-5px);
         }
 
-        /* Footer Styling */
+        .icon-box i {
+            font-size: 40px;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+
         footer {
-            background-color: #333;
+            background-color: #0d6efd;
             color: white;
+            padding: 20px;
         }
 
-        /* Form Elements Styling */
-        .form-control {
-            border-radius: 0.25rem;
-        }
-
-        /* Section Heading */
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-
-        /* Destinations Section */
-        #destinations .col-md-4 {
-            margin-bottom: 30px;
-        }
-
-        #destinations h4 {
-            margin-top: 15px;
+        .btn-primary {
+            padding: 10px 25px;
         }
     </style>
+
+    <!-- Structured Data for AI & Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "SkyRoute Travel",
+      "description": "Professional flight booking agency offering domestic and international airline tickets.",
+      "url": "https://yourgithubusername.github.io/",
+      "serviceType": "Flight Booking Services"
+    }
+    </script>
+
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Travel Flight Agency</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#flights">Flights</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#destinations">Destinations</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="hero bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1 class="display-4">Welcome to Our Flight Booking Agency</h1>
-            <p>Your one-stop destination for hassle-free flight bookings to top destinations worldwide.</p>
-        </div>
-    </section>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">SkyRoute Travel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-    <!-- Flights Section -->
-    <section id="flights" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2>Our Flight Booking Services</h2>
-            <p>Book your flight with us and enjoy the best prices and flexible options!</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="flight">
-                        <div class="card-body">
-                            <h5 class="card-title">Cheap Flights</h5>
-                            <p class="card-text">Get the best flight deals for your travel.</p>
-                        </div>
-                    </div>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <h1>Your Trusted Flight Booking Expert</h1>
+        <p class="lead mt-3">Cheap Flights • International Tickets • 24/7 Support</p>
+        <a href="#contact" class="btn btn-primary mt-4">Book Your Flight</a>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">Our Flight Services</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-airplane"></i>
+                    <h5>International Flights</h5>
+                    <p>Best deals on worldwide airline tickets with flexible booking options.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="flight">
-                        <div class="card-body">
-                            <h5 class="card-title">Last-Minute Flights</h5>
-                            <p class="card-text">Find great deals on last-minute flight bookings.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-clock-history"></i>
+                    <h5>Last Minute Deals</h5>
+                    <p>Affordable last-minute flight reservations at unbeatable prices.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="flight">
-                        <div class="card-body">
-                            <h5 class="card-title">Group Bookings</h5>
-                            <p class="card-text">Get discounts and special offers for group bookings.</p>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-people-fill"></i>
+                    <h5>Group Bookings</h5>
+                    <p>Special discounts and customized packages for group travel.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Destinations Section -->
-    <section id="destinations" class="py-5">
-        <div class="container text-center">
-            <h2>Top Destinations</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="https://via.placeholder.com/300" class="img-fluid" alt="destination">
-                    <h4>Paris</h4>
-                </div>
-                <div class="col-md-4">
-                    <img src="https://via.placeholder.com/300" class="img-fluid" alt="destination">
-                    <h4>New York</h4>
-                </div>
-                <div class="col-md-4">
-                    <img src="https://via.placeholder.com/300" class="img-fluid" alt="destination">
-                    <h4>Tokyo</h4>
-                </div>
+<!-- Destinations Section -->
+<section id="destinations" class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="section-title">Popular Destinations</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <i class="bi bi-building display-4 text-primary"></i>
+                <h5 class="mt-3">Paris</h5>
+                <p>Romantic city of lights with exclusive airfare deals.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-globe-americas display-4 text-primary"></i>
+                <h5 class="mt-3">New York</h5>
+                <p>Fly to the USA with competitive international fares.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-geo-alt-fill display-4 text-primary"></i>
+                <h5 class="mt-3">Tokyo</h5>
+                <p>Explore Asia with budget-friendly airline tickets.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2>Contact Us</h2>
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="name">Your Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+<!-- About Section (Now positioned properly before Contact) -->
+<section id="about" class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">About SkyRoute Travel</h2>
+        <p class="lead">
+            We are a professional flight booking agency specializing in affordable airline tickets,
+            corporate travel management, and international flight reservations.
+        </p>
+        <p>
+            With years of industry experience, we help travelers secure the best flight deals
+            while ensuring smooth booking and 24/7 customer assistance.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">Contact Us</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name">
                     </div>
-                    <div class="form-group col-md-6">
-                        <label for="email">Your Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Enter your email">
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="4" placeholder="Your message..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+                    <div class="mb-3">
+                        <label class="form-label">Travel Details</label>
+                        <textarea class="form-control" rows="4" placeholder="Destination, dates, passengers..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Request Quote</button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About Us Section -->
-    <section id="about" class="py-5">
-        <div class="container text-center">
-            <h2>About Us</h2>
-            <p>We are a dedicated travel agency with over 20 years of experience helping travelers book affordable flights to destinations all over the world. Let us help you with your next adventure!</p>
-        </div>
-    </section>
+<!-- Footer -->
+<footer class="text-center">
+    <p>© 2026 SkyRoute Travel | Flight Booking Specialist</p>
+</footer>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2026 Travel Flight Agency. All rights reserved.</p>
-    </footer>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Bootstrap JS & jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
+
